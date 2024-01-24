@@ -13,57 +13,52 @@
 
 <body>
     <div class="background">
-        <form class="formtable" onsubmit="checkNameBlur(event)">
+        <form class="formtable" onsubmit="return checkForm();">
             <table class="bang" align="center">
                 <!-- 1 -->
                 <tr class="text">
                     <td width="600px"><label for="name">Họ và tên</label></td>
-                    <td colspan="3"><input type="text" name="fullName" id="fullName" placeholder="Nhập họ tên..."> </td>
-                    <td><p id="error"></p></td>
+                    <td colspan="3"><input type="text" name="fullName" id="fullName" placeholder="Nhập họ tên..." oninput="checkName()"> </td>
+                    <td><p id="errorName"></p></td>
                 </tr>
                 <!-- 2 -->
                 <tr class="fale">
                     <td><label for="sex">Giới tính</label></td>
-                    <td width="400px"><input type="radio" name="sex" value="0" id="sex">Nam
+                    <td width="400px">
+                        <input type="radio" name="sex" value="0" id="sex" onchange="checkSex()">Nam
                         <i class="fa-solid fa-person"></i>
                     </td>
-                    <td width="400px"><input type="radio" name="sex" value="1" id="sex">Nữ
+                    <td width="400px">
+                        <input type="radio" name="sex" value="1" id="sex" onchange="checkSex()">Nữ
                         <i class="fa-solid fa-person-dress"></i>
                     </td>
                     <td width="900px"></td>
+                    <td><p id="errorSex"></p></td>
                 </tr>
                 <!-- 3 -->
                 <tr class="text">
                     <td><label for="email">Email <i class="fa-solid fa-envelope"></i></label></td>
-                    <td colspan="3"><input type="email" name="email" id="email" placeholder="Nhập email"></td>
-                    <td>
-                        <p id="error3"></p>
-                    </td>
+                    <td colspan="3"><input type="email" name="email" id="email" placeholder="Nhập email" oninput="checkEmail()"></td>
+                    <td><p id="errorEmail"></p></td>
                 </tr>
                 <!-- 4  -->
                 <tr class="text">
                     <td><label for="tel">Số điện thoại</label></td>
                     <td colspan="4"><input type="text" name="phoneNumber" id="phoneNumber"
-                            placeholder="Nhập số điện thoại..."></td>
-                    <td>
-                        <p id="error4"></p>
-                    </td>
+                            placeholder="Nhập số điện thoại..." oninput="checkPhone()"></td>
+                    <td><p id="errorPhone"></p></td>
                 </tr>
                 <!-- 5 -->
                 <tr class="text">
                     <td><label for="password">Mật khẩu</label></td>
-                    <td colspan="3"><input type="password" name="password" id="password"></td>
-                    <td>
-                        <p id="error5"></p>
-                    </td>
+                    <td colspan="3"><input type="password" name="password" id="password" oninput="checkPassword()"></td>
+                    <td><p id="errorPassword"></p></td>           
                 </tr>
                 <!-- 6 -->
                 <tr class="text">
                     <td><label for="password">Xác nhận mật khẩu</label></td>
-                    <td colspan="3"><input type="password" name="confirmPassword" id="confirmPassword"></td>
-                    <td>
-                        <p id="error6"></p>
-                    </td>
+                    <td colspan="3"><input type="password" name="confirmPassword" id="confirmPassword" oninput="checkPassword()"></td>
+                    <td><p id="errorConfirmPassword"></p></td>
                 </tr>
                 <!--login & reset -->
                 <table class="button" align="center">
@@ -75,6 +70,7 @@
                     </tr>
                 </table>
             </table>
+            
         </form>
     </div>
     <script type="text/javascript" src="./main.js"></script>
