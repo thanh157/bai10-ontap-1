@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="exercise2.css">
+    <title>Bai 2</title>
+</head>
+
+<body>
+    <div class="background">
+        <form class="formtable" onsubmit="checkNameBlur(event)">
+            <table class="bang" align="center">
+                <!-- 1 -->
+                <tr class="text">
+                    <td width="600px"><label for="name">Họ và tên</label></td>
+                    <td colspan="3"><input type="text" name="fullName" id="fullName" placeholder="Nhập họ tên..."> </td>
+                    <td><p id="error"></p></td>
+                </tr>
+                <!-- 2 -->
+                <tr class="fale">
+                    <td><label for="sex">Giới tính</label></td>
+                    <td width="400px"><input type="radio" name="sex" value="0" id="sex">Nam
+                        <i class="fa-solid fa-person"></i>
+                    </td>
+                    <td width="400px"><input type="radio" name="sex" value="1" id="sex">Nữ
+                        <i class="fa-solid fa-person-dress"></i>
+                    </td>
+                    <td width="900px"></td>
+                </tr>
+                <!-- 3 -->
+                <tr class="text">
+                    <td><label for="email">Email <i class="fa-solid fa-envelope"></i></label></td>
+                    <td colspan="3"><input type="email" name="email" id="email" placeholder="Nhập email"></td>
+                    <td>
+                        <p id="error3"></p>
+                    </td>
+                </tr>
+                <!-- 4  -->
+                <tr class="text">
+                    <td><label for="tel">Số điện thoại</label></td>
+                    <td colspan="4"><input type="text" name="phoneNumber" id="phoneNumber"
+                            placeholder="Nhập số điện thoại..."></td>
+                    <td>
+                        <p id="error4"></p>
+                    </td>
+                </tr>
+                <!-- 5 -->
+                <tr class="text">
+                    <td><label for="password">Mật khẩu</label></td>
+                    <td colspan="3"><input type="password" name="password" id="password"></td>
+                    <td>
+                        <p id="error5"></p>
+                    </td>
+                </tr>
+                <!-- 6 -->
+                <tr class="text">
+                    <td><label for="password">Xác nhận mật khẩu</label></td>
+                    <td colspan="3"><input type="password" name="confirmPassword" id="confirmPassword"></td>
+                    <td>
+                        <p id="error6"></p>
+                    </td>
+                </tr>
+                <!--login & reset -->
+                <table class="button" align="center">
+                    <tr class="text">
+                        <td colspan="2"><label for="submit" class="visually-hidden"></label></td>
+                        <td><button id="login" type="submit">Đăng ký</button></td>
+                        <td><button id="reset" type="reset">Xóa trắng <i class="fa-solid fa-rotate-left"></i></button>
+                        </td>
+                    </tr>
+                </table>
+            </table>
+        </form>
+    </div>
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+
+</html>
